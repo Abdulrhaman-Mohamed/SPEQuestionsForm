@@ -74,7 +74,7 @@ async function CreateAnswer(content , userid)
     await answer.save();
 
     await answer.update({
-        $push:{
+        $set:{
             Content:content
         },
         $push:{
@@ -85,12 +85,12 @@ async function CreateAnswer(content , userid)
 
     
 }
-let ans = [{Ques :'640ddee21a76f9319f69e195' , Ans :'25'} , {Ques :'640ddee21a76f9319f69e195' , Ans :'25'} , {Ques :'640ddee21a76f9319f69e195' , Ans :'25'}];
+//let ans = [{Ques :'640ddee21a76f9319f69e195' , Ans :'25'} , {Ques :'640ddee21a76f9319f69e195' , Ans :'25'} , {Ques :'640ddee21a76f9319f69e195' , Ans :'25'}];
 
-ans.forEach(element => {
-    console.log(element);
+// ans.forEach(element => {
+//     console.log(element);
     
-});
+// });
 //CreateAnswer(ans , '640dfe2c9e6f2858fa643e6c');
 
 //CreateUser('Ahmed' , 'Ahmed@gmail.com' , '011254554');
